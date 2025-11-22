@@ -3,9 +3,9 @@ const mysql = require("mysql2");
 const util = require('util');
 
 const db = mysql.createConnection({
-  host: "127.0.0.1",
+  host: "mysql.railway.internal",
   user: "root",
-  password: "ifprquedas",
+  password: "EPMhulfaNpDKPKWDkUchPgOrMQEtfWrV",
   database: "carepet"
 });
 

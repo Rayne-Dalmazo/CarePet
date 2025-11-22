@@ -356,7 +356,7 @@ function excluirItem(tipo, id) {
         return;
     }
 
-    fetch(`http://localhost:3000/api/${rota}/${id}`, {
+    fetch(`mysql://root:EPMhulfaNpDKPKWDkUchPgOrMQEtfWrV@mysql.railway.internal:3306/railway/api/${rota}/${id}`, {
         method: "DELETE"
     })
     .then(res => {

@@ -68,7 +68,7 @@ btnSalvarRemedio?.addEventListener("click", async () => {
     };
 
     try {
-       const r = await fetch("http://localhost:3000/api/remedio", {
+       const r = await fetch("mysql://root:EPMhulfaNpDKPKWDkUchPgOrMQEtfWrV@mysql.railway.internal:3306/railway/api/remedio", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(dataToSend),

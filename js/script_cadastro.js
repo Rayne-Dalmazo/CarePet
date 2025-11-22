@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     try {
       // ROTA CORRETA
-      const res = await fetch("http://localhost:3000/cadastro", {
+      const res = await fetch("mysql://root:EPMhulfaNpDKPKWDkUchPgOrMQEtfWrV@mysql.railway.internal:3306/railway/cadastro", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ nome, email, senha })

@@ -23,7 +23,7 @@ if (!idTutor || idTutor === "undefined" || idTutor === "null") {
 // =============================================================
 // CONFIG API
 // =============================================================
-const API_BASE = "http://localhost:3000/api";
+const API_BASE = "mysql://root:EPMhulfaNpDKPKWDkUchPgOrMQEtfWrV@mysql.railway.internal:3306/railway/api";
 
 // =============================================================
 // Função util: tenta múltiplas URLs até obter status OK
@@ -126,7 +126,7 @@ async function enviarFotoTutor(arquivo) {
 // =============================================================
 async function carregarAnimais() {
   try {
-    const res = await fetch(`http://localhost:3000/api/animais/${idTutor}`);
+    const res = await fetch(`mysql://root:EPMhulfaNpDKPKWDkUchPgOrMQEtfWrV@mysql.railway.internal:3306/railway/api/animais/${idTutor}`);
     if (!res.ok) throw new Error("Erro ao carregar animais");
 
     const animais = await res.json();
@@ -177,7 +177,7 @@ async function carregarAnimais() {
 // =============================================================
 async function excluirAnimal(idAnimal) {
   try {
-    const res = await fetch(`http://localhost:3000/api/animais/${idAnimal}`, {
+    const res = await fetch(`mysql://root:EPMhulfaNpDKPKWDkUchPgOrMQEtfWrV@mysql.railway.internal:3306/railway/api/animais/${idAnimal}`, {
       method: "DELETE"
     });
 
