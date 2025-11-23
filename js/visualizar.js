@@ -7,7 +7,7 @@ async function carregarAnimal() {
     const params = new URLSearchParams(window.location.search);
     const id = params.get("id");
 
-    const resposta = await fetch(`mysql://root:EPMhulfaNpDKPKWDkUchPgOrMQEtfWrV@mysql.railway.internal:3306/railway/api/animal/${id}`);
+    const resposta = await fetch(`mysql://root:EPMhulfaNpDKPKWDkUchPgOrMQEtfWrV@metro.proxy.rlwy.net:18314/railway/api/animal/${id}`);
     animalGlobal = await resposta.json();
 
 

@@ -59,7 +59,7 @@ botao.addEventListener('click', async () => {
     if (foto) formData.append("foto", foto);
 
     try {
-        const res = await fetch("mysql://root:EPMhulfaNpDKPKWDkUchPgOrMQEtfWrV@mysql.railway.internal:3306/railway/api/animal", {
+        const res = await fetch("mysql://root:EPMhulfaNpDKPKWDkUchPgOrMQEtfWrV@metro.proxy.rlwy.net:18314/railway/api/animal", {
             method: "POST",
             body: formData
         });

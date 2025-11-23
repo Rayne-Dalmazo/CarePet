@@ -68,7 +68,7 @@ btnSalvarRemedio?.addEventListener("click", async () => {
     };
 
     try {
-       const r = await fetch("mysql://root:EPMhulfaNpDKPKWDkUchPgOrMQEtfWrV@mysql.railway.internal:3306/railway/api/remedio", {
+       const r = await fetch("mysql://root:EPMhulfaNpDKPKWDkUchPgOrMQEtfWrV@metro.proxy.rlwy.net:18314/railway/api/remedio", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(dataToSend),
@@ -120,7 +120,7 @@ btnSalvarVacina?.addEventListener("click", async () => {
     };
 
     try {
-        const r = await fetch("http://localhost:3000/api/vacina", {
+        const r = await fetch("mysql://root:EPMhulfaNpDKPKWDkUchPgOrMQEtfWrV@metro.proxy.rlwy.net:18314/railway/api/vacina", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data),
@@ -162,7 +162,7 @@ btnSalvarExame?.addEventListener("click", async () => {
     };
 
     try {
-        const r = await fetch("http://localhost:3000/api/exame", {
+        const r = await fetch("mysql://root:EPMhulfaNpDKPKWDkUchPgOrMQEtfWrV@metro.proxy.rlwy.net:18314/railway/api/exame", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(dataToSend)

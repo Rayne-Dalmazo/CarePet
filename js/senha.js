@@ -12,7 +12,7 @@ document.getElementById("cadastroForm").addEventListener("submit", async (e) => 
     return;
   }
 
-  const resposta = await fetch("mysql://root:EPMhulfaNpDKPKWDkUchPgOrMQEtfWrV@mysql.railway.internal:3306/railway/api/usuarios/alterar-senha", {
+  const resposta = await fetch("mysql://root:EPMhulfaNpDKPKWDkUchPgOrMQEtfWrV@metro.proxy.rlwy.net:18314/railway/api/usuarios/alterar-senha", {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ email, novaSenha })

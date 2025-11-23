@@ -15,7 +15,7 @@ document.getElementById('formExame').addEventListener('submit', async (e) => {
   formData.append("foto", document.getElementById('fotoExame').files[0]);
 
   try {
-    const res = await fetch("mysql://root:EPMhulfaNpDKPKWDkUchPgOrMQEtfWrV@mysql.railway.internal:3306/railway/exame", {
+    const res = await fetch("mysql://root:EPMhulfaNpDKPKWDkUchPgOrMQEtfWrV@metro.proxy.rlwy.net:18314/railway/railway/exame", {
       method: "POST",
       body: formData
     });

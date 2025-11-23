@@ -4,7 +4,7 @@ document.getElementById("recuperarForm").addEventListener("submit", async (e) =>
   const email = document.getElementById("email").value.trim();
   const msg = document.getElementById("msg");
 
-  const resposta = await fetch("mysql://root:EPMhulfaNpDKPKWDkUchPgOrMQEtfWrV@mysql.railway.internal:3306/railway/api/usuarios/verificar-email", {
+  const resposta = await fetch("mysql://root:EPMhulfaNpDKPKWDkUchPgOrMQEtfWrV@metro.proxy.rlwy.net:18314/railway/api/usuarios/verificar-email", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ email })

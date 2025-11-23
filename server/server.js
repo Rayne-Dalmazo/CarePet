@@ -32,7 +32,7 @@ app.use("/api", detalhesPetRouter);
 
 
 // Iniciar servidor
-const PORT = process.env.PORT || 3306;
+const PORT = process.env.PORT || 18314;
 
 app.listen(PORT, () => {
     console.log(`🚀 Servidor rodando em http://localhost:${PORT}`);
