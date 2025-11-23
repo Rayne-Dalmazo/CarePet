@@ -3,10 +3,10 @@ const mysql = require("mysql2");
 const util = require('util');
 
 const db = mysql.createConnection({
-  host: "metro.proxy.rlwy.net",
+  host: "mysql.railway.internal",
   user: "root",
   password: "EPMhulfaNpDKPKWDkUchPgOrMQEtfWrV",
-  database: "teste"
+  database: "railway"
 });
 
 db.connect(err => {

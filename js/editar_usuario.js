@@ -8,7 +8,7 @@ async function carregarDados() {
         return;
     }
 
-    const res = await fetch(`mysql://root:EPMhulfaNpDKPKWDkUchPgOrMQEtfWrV@metro.proxy.rlwy.net:18314/railway/api/usuarios/${id}`);
+    const res = await fetch(`https://back-production-7df8.up.railway.app/api/usuarios/${id}`);
     const user = await res.json();
 
     if (!res.ok) {
@@ -80,7 +80,7 @@ async function salvar(id, nome, email, senha) {
     const body = { nome, email };
     if (senha) body.senha = senha;
 
-    const res = await fetch(`mysql://root:EPMhulfaNpDKPKWDkUchPgOrMQEtfWrV@metro.proxy.rlwy.net:18314/railway/api/usuarios/${id}`, {
+    const res = await fetch(`https://back-production-7df8.up.railway.app/api/usuarios/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body)
@@ -97,7 +97,7 @@ async function uploadFoto(id, arquivo) {
     const formData = new FormData();
     formData.append("foto", arquivo);
 
-    return fetch(`mysql://root:EPMhulfaNpDKPKWDkUchPgOrMQEtfWrV@metro.proxy.rlwy.net:18314/railway/api/usuarios/${id}/upload`, {
+    return fetch(`https://back-production-7df8.up.railway.app/api/usuarios/${id}/upload`, {
         method: "POST",
         body: formData
     });

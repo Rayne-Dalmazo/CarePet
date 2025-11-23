@@ -5,7 +5,7 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
     const senha = document.getElementById("senha").value;
 
     try {
-        const resposta = await fetch("mysql://root:EPMhulfaNpDKPKWDkUchPgOrMQEtfWrV@metro.proxy.rlwy.net:18314/railway/api/usuarios/login", {
+        const resposta = await fetch("https://back-production-7df8.up.railway.app/api/usuarios/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 // =============================================================
 async function carregarAnimal(id) {
     try {
-        const res = await fetch(`http://localhost:3000/api/animal/${id}`);
+        const res = await fetch(`https://back-production-7df8.up.railway.app/api/animal/${id}`);
 
         const animal = await res.json();
 
@@ -74,7 +74,7 @@ document.getElementById('btnModificar').addEventListener('click', async () => {
     if (foto) formData.append("foto", foto);
 
     try {
-        const res = await fetch(`http://localhost:3000/api/animais/${id}`, {
+        const res = await fetch(`https://back-production-7df8.up.railway.app/api/animais/${id}`, {
             method: "PUT",
             body: formData
         });
@@ -238,7 +238,7 @@ async function salvarExame() {
 //   FUNÇÃO POST GENÉRICA
 // =============================================================
 async function enviarPOST(endpoint, body, callback) {
-    const res = await fetch(`http://localhost:3000/api/${endpoint}`, {
+    const res = await fetch(`https://back-production-7df8.up.railway.app/api/${endpoint}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body)
@@ -258,7 +258,7 @@ async function enviarPOST(endpoint, body, callback) {
 // =============================================================
 async function carregarLista(tipo, idAnimal, template) {
     try {
-        const res = await fetch(`http://localhost:3000/api/${tipo}/${idAnimal}`);
+        const res = await fetch(`https://back-production-7df8.up.railway.app/api/${tipo}/${idAnimal}`);
 
         if (!res.ok) {
             console.error(`Erro na rota /${tipo}:`, res.status);
@@ -356,7 +356,7 @@ function excluirItem(tipo, id) {
         return;
     }
 
-    fetch(`mysql://root:EPMhulfaNpDKPKWDkUchPgOrMQEtfWrV@mysql.railway.internal:3306/railway/api/${rota}/${id}`, {
+    fetch(`mysql://root:EPMhulfaNpDKPKWDkUchPgOrMQEtfWrV@metro.proxy.rlwy.net:18314/railway/api/${rota}/${id}`, {
         method: "DELETE"
     })
     .then(res => {
