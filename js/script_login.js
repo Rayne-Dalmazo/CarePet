@@ -5,7 +5,7 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
     const senha = document.getElementById("senha").value;
 
     try {
-        const resposta = await fetch("https://back-production-7df8.up.railway.app/api/usuarios/login", {
+        const resposta = await fetch("https://back-production-7df8.up.railway.app/usuarios/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
